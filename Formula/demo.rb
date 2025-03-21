@@ -17,6 +17,8 @@ class Demo < Formula
   def install
     virtualenv_install_with_resources
     ohai "+ Validating Install Please Wait +"
-    system "demo"
+    system "#{ENV['HOMEBREW_CELLAR']}/demo/1.31.1/libexec/bin/python", "#{Dir.pwd}/demo.py"
+    ohai "+ Successful Install +"
+    ohai "[i]- Open a new tab to ensure path is updated -[i]"
   end
 end
