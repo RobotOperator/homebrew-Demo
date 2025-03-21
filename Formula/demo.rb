@@ -16,5 +16,7 @@ class Demo < Formula
 
   def install
     virtualenv_install_with_resources
+    ohai "+ Validating Install Please Wait +"
+    system "demo"
   end
 end
